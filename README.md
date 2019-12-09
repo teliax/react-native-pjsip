@@ -2,6 +2,13 @@
 
 A [PJSIP](http://www.pjsip.org/) module for React Native.
 
+## Changes made to the fork 
+1. Deleted endpoint instance which was not getting properly killed when app kept in background, specifically with device with Android version 8.0 and above. App used to crash when brought to foreground after couple minutes.
+commit :- https://github.com/teliax/react-native-pjsip/commit/6a9d7741029e85515fa64cae89659f144a1219d6
+
+2. Disabled video feature count which was causing crash on IOS. While using react-native-callkeep library, we were getting Call Failed dialer during incoming call and app used to crash.
+commit :- https://github.com/teliax/react-native-pjsip/commit/9aa1ac4d2f3d4a39ec9aec242abbe96aadb91ce8
+
 ## Support
 - Currently support for iOS and Android.  
 - Support video and audio communication.
